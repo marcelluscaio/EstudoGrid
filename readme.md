@@ -10,6 +10,7 @@ Grid:
 1) Criando o grid
 grid-template-columns
 grid-template- rows
+Vendo no devtools
 
 Grid container x grid item x grid cell
 
