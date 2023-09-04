@@ -11,6 +11,8 @@ main{
 
 main div{
   display: inline-block;
+
+  padding: .25em .75em;
   
   background-color: #79cb97;
 
@@ -19,6 +21,51 @@ main div{
   color: #121313;
 }
 
-/* .grid{
-  display: grid
+
+.grid{
+  display: grid;
+
+  grid-template-columns: 100px 100px 100px;
+
+  grid-template-rows: 200px 200px 200px 200px;
+}
+
+
+/* Mostrar, e depois comentar de novo */
+.grid{
+  /* grid-template-rows: 200px; */
+}
+
+.grid{
+  width: 80%;
+  margin-inline: auto;
+
+  /* width: 200px; */
+}
+
+.grid{
+  /* grid-template-columns: 20% 20% 20%; */
+  
+  /* grid-template-columns: 50% 50%; */
+
+
+
+  /* grid-template-columns: 50% 50% 50%; */
+}
+
+/* .grid > div:nth-child(2n -1){
+  margin-right: 20px;
 } */
+
+.grid{
+  gap: 20px;
+
+  grid-template-columns: 1fr 1fr;
+}
+
+/* Aumentar o tamanho de um dos elementos */
+.grid >div:nth-child(3){
+  /* width: 1000px; */
+}
+
+/* Aumentar o conteudo de um dos elementos no html*/
