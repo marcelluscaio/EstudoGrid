@@ -1,0 +1,40 @@
+h2{
+  margin: 0;
+}
+
+section{
+  padding: 1rem;
+  border: 1px solid blue;
+  margin-bottom: .5rem;
+}
+
+div{
+  height: 2rem;
+  width: 2rem;
+  margin-bottom: .5rem;
+  margin-right: .5rem;
+  
+  background-color: red;
+}
+
+.inline > div{
+  display: inline;
+}
+
+.inline-block > div{
+  display: inline-block;
+}
+
+.flex{
+  display: flex;
+}
+
+.grid{
+  display: grid;
+  grid-template-columns: 100px 100px 100px;
+  grid-template-columns: repeat(4, 100px);
+  grid-template-columns: repeat(4, 1fr);
+
+}
+
+
