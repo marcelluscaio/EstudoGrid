@@ -1,42 +1,38 @@
 # Introdução a CSS GRID
+</br>
 
 ## Roteiro
+</br>
 
 ### Criando o grid
-grid-template-columns
-grid-template- rows
-Vendo no devtools
+</br>
 
-Grid container x grid item x grid cell
+- Usando o devtools
+- grid-template-columns e grid-template- rows
+  - Com px
+  - Com %
+  - Gap (cuidado com %)
+  - Com fr
+    - fr precisa de espaço livre Mostrar:
+      - Conteúdo com width grande demais
+      - Conteudo maior que os outros
+  - Com auto
+  - % + fr (Nunca use % somando 100%)
 
-Grid explicito x grid implicito
-- Voce cria os grids, mas o grid cria grids implicitos
+- Grid container x grid row x grid column x grid cell x grid item
+- Grid explicito x grid implicito
+- Repeat
+- minmax()
+- auto fill e auto fit
+- fit-content()
+- Hierarquia
+  - Tamanho do elemento pai >= tamanho do grid >= Tamanho das colunas + (gap * (numero de colunas -1))
+  - Coluna >= Elemento
 
-com px
-Com %
-
-Gap
- - cuidado com %
-
-com fr
-  - fr eh espaco livre. MOstrar i que acontece quando tem um conteudo com width grande demais e com conteudo maior que os outros
-com auto
-% + fr (Nunca use % somando 100%)
-
-Repeat
-
-minmax()
-
-Ainda criando o grid: auto fill e auto fit (geralmente queremos esse)
-
-
-Deixar claro:
-Hierarquia:
-Tamanho do elemento pai >= tamanho do grid >= Tamanho das colunas + (gap * (numero de colunas -1))
-Coluna >= Elemento
-
+</br>
 
 ### Posicionando elementos no grid 
+</br>
 
 - grid-column / grid-row
   - span 2, 3 (o que acontece se nao houver mais colunas? pula par aa linha debaixo)
@@ -54,29 +50,31 @@ grid-auto flow dense
 
 - Order (isso pode baguncar a ordem que o leitore de tela lê, e a seleção do conteúdo com mouse)
 
-
-
-
+</br>
 
 ### Alinhando o grid e os items do Grid
-Lida com as celulas em relacao ao grid. Precisa de espaço no grid
-justify-content (Padrao start. end, center, space-around, space evenly, space between )
-align-content (Padrao start. end, center, space-around, space evenly, space between )
-place content
+</br>
 
+- Justify-content, align-content, place-content
+  - Lida com as celulas em relacao ao grid. Precisa de espaço no grid
+  - Valores: stretch, start, end, center, space-around, space evenly, space between;
+  - Padrão stretch se a largura das colunas ou altura das linhas não é definida. Se for definida, passar a ser start.
 
-Lida com o conteudo dentro das células
-Justify-items (padrao stretch. Valores start, center, end)
-align-items (padrao stretch. Valores start, center, end)
-place items (cuidado com a comaptibilidade)
+- Justify-items, align-items, place-items
+  - Lida com o conteudo dentro das células. Precisa de espaço na célula;
+  - Valores: stretch, start, end, center;
+  - Padrão stretch se a largura ou altura do elemento não são definidas. Se forem definidas, passar a ser start.
 
-Usado direto na celula
-justify-self
-align-self
+- Justify-self, align-self, place-self
+  - Similar à família dos -items, é usado direto no elemento. Lida com o conteudo dentro da célula. Precisa de espaço na célula;
+  - Valores: stretch, start, end, center;
+  - Padrão stretch se a largura ou altura do elemento não são definidas. Se forem definidas, passar a ser start.
 
-
+</br>
 
 ### Estudos de caso
+</br>
+
 Exercicios
 https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Grid_skills
 
@@ -85,8 +83,10 @@ https://codepen.io/marcelluscaio/pen/zYyvWvb
 
 EM CONSTRUCAO
 
+</br>
 
 ## Referências:
+</br>
 
 Curso WesBos
 https://cssgrid.io/

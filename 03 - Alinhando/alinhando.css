@@ -149,6 +149,7 @@ Elemento com grid / grid em si / celulas / elementos */
   place-items: stretch;
 }
 
+
 /* Self */
 .grid > div:nth-child(5){
   justify-self: start;
@@ -159,5 +160,12 @@ Elemento com grid / grid em si / celulas / elementos */
   align-self: center;
   align-self: end;
   place-self: center;
+}
+
+.grid > :nth-child(1){
+  grid-column: 1 / span 2;
+
+  justify-self: start;
+
 }
 
