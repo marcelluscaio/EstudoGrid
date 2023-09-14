@@ -1,0 +1,157 @@
+/* base */
+body{
+  padding-block: 5vh;
+
+  background-color: #aca1ac;
+  background-image:  repeating-radial-gradient( circle at 0 0, transparent 0, #aca1ac 33px ), repeating-linear-gradient( #8ffad355, #8ffad3 );
+  background-repeat: no-repeat;
+}
+
+main{
+  border: 2px solid #335429;
+}
+
+main div{
+  padding: .25em .75em;
+  
+  background-color: #b9c6ae;
+
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #121313;
+}
+
+
+/* Comeca aqui */
+.grid{
+  display: grid;
+  width: 50%;
+  margin-inline: auto;
+}
+
+.grid > div{
+  border: 1px solid #121313;
+}
+
+
+
+.grid{
+  grid-template-columns: repeat(6, 1fr);
+  gap: 1rem;
+}
+
+.grid > div:nth-child(1){
+  grid-column: 1/3;
+
+  grid-column: 1/4;
+
+  grid-column: 1 / -1;
+
+  grid-column: 1 / span 3;
+
+  grid-column: 2 / span 3;
+
+  grid-column: span 3 / -1
+}
+
+/* .grid > div:nth-child(3n + 2){
+  grid-column: span 5;
+} */
+
+/* .grid{
+  grid-auto-flow: dense;
+} */
+
+/* O mesmo vale para row */
+.grid > div:nth-child(1){
+  grid-column: span 4;
+
+  grid-row: span 3;
+
+  /* recomentar depois */
+  grid-row: span 15;
+}
+
+/* Mais exemplos */
+.grid > div:nth-child(9){
+  /* grid-column: 2 / 5; */
+
+  /* grid-column: span 2 / 5; */
+
+  /* grid-column: 2 / span 2; */
+}
+
+/*RETOMAR DAQUI*/
+/* row - 1 sem template rows declaradas */
+.grid > div:nth-child(1){
+  grid-row: span 3 / -1;
+}
+
+.grid{
+  /* grid-template-rows: repeat(8, auto); */
+
+
+  /* grid-template-rows: repeat(3, auto); */
+
+  /* grid-template-rows: repeat(4, auto); */
+
+  /* grid-template-rows: repeat(8, auto); */
+
+  /* grid-template-rows: repeat(4, 100px); */
+  
+  /* height: 800px; */
+  
+  /* grid-template-rows: repeat(8, 100px); */
+
+  /* height: unset; */
+
+  /* min-height: 800px; */
+  
+  /* height: 1000px; */
+  
+  /* grid-template-rows: repeat(8, 1fr); */
+
+  /* grid-template-rows: repeat(auto-fit, minmax(100px, 1fr)); */
+
+  /* height: 800px */
+}
+
+/* Cuidado com o tamanho do grid explicito */
+.grid > div:nth-child(1){
+  /* grid-column: span 8; */
+
+  /* grid-column: span 12; */
+}
+
+
+/* Fazendo a mesma coisa, mas com grid template areas */
+/* .grid{
+  grid-template-areas: 
+  "a a a a a a" 
+  "b b b b b b";
+} */
+
+
+/* .grid > div:nth-child(1){
+  grid-area: b;
+} */
+
+
+
+
+/*Order*/
+/* - Order (isso pode baguncar a ordem que o leitore de tela lê, e a seleção do conteúdo com mouse) */
+
+.grid > div:nth-child(13){
+  order: 2;
+  /* order: -1; */
+}
+
+.grid > div:nth-child(14){
+  order: 1;
+}
+
+/* Cuidado ao fazer isso com elementos que voce definiu a posicao por grid-column */
+.grid > div:nth-child(1){
+  order: 3;
+}

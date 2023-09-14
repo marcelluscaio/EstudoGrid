@@ -1,0 +1,195 @@
+/* base */
+body{
+  padding-block: 1rem;
+  
+  background-image: radial-gradient(#96d981 3px, transparent 3px), radial-gradient(#96d981 3px, transparent 3px);
+  background-size: 28px 28px;
+  background-position: 0 0, 14px 14px;
+  background-color: #0b7309;
+}
+
+main{
+  border: 2px solid #96d981;
+}
+
+main div{
+  /* mostrar e depois tirar */
+  /* display: inline-block; */
+
+  padding: .25em .75em;
+  
+  background-color: #79cb97;
+
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #121313;
+}
+
+
+/* Comeca aqui */
+
+.grid{
+  display: grid;
+
+  grid-template-columns: 100px 100px 100px;
+
+  grid-template-rows: 200px 200px 200px 200px;
+}
+
+
+/* Mostrar, e depois comentar de novo */
+.grid{
+  /* grid-template-rows: 200px; */
+}
+
+.grid{
+  width: 80%;
+  margin-inline: auto;
+
+  /* width: 200px; */
+}
+
+.grid{
+  grid-template-columns: 20% 20% 20%;
+  
+  grid-template-columns: 50% 50%;
+
+
+
+  /* grid-template-columns: 50% 50% 50%; */
+}
+
+/* .grid > div:nth-child(2n -1){
+  margin-right: 20px;
+} */
+/* NOTE QUE A MARGEM EH DO ELEMENTO, NAO DA CELULA */
+
+
+/* Conhecendo GAP  e FR */
+.grid{
+  gap: 20px;
+
+  grid-template-columns: 1fr 1fr;
+}
+
+/* CUIDADO COM GAP EM % */
+.grid{
+  grid-template-rows: unset;
+
+  /* gap:10% 20%; */
+
+  /* gap: 100px 20%; */
+
+  /* gap: 10vh 20%; */
+}
+
+/* FR e Aumentar o tamanho de um dos elementos - Espaco livre */
+/* .grid >div:nth-child(3){
+  width: 1000px;
+} */
+
+/* Aumentar o conteudo de um dos elementos no html*/
+
+
+/* mais fr */
+.grid{
+  /* grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr; */
+
+  /* grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr; */
+
+  /* grid-template-columns: 1fr 2fr 1fr 1fr 1fr 1fr 5fr; */
+
+}
+
+/* auto e % + fr */
+.grid{
+  /* grid-template-columns: auto 1fr; */
+
+  /* grid-template-columns: 1fr auto; */
+  
+  /* grid-template-columns: 80% 1fr; */
+
+}
+
+/* CUIDADO */
+.grid{
+  /* width: 500px;
+  grid-template-columns: 200px 200px 200px; */
+}
+
+/* rows: height x template rows */
+.grid{
+  /* grid-template-rows: 1fr 1fr 1fr; */
+
+  /* height: 80vh; */
+}
+
+/*repeat*/
+.grid{
+  /* grid-template-columns: repeat(6, 1fr); */
+
+  /* grid-template-columns: repeat(3, 1fr 2fr); */
+
+  /* grid-template-columns: auto repeat(2, 1fr 2fr) 100px; */
+}
+
+
+/*minmax()*/
+.grid{
+  /* grid-template-columns: minmax(100px, 1fr) minmax(300px, 1fr); */
+
+  /* grid-template-columns: repeat(3, minmax(50px, 2fr) minmax(100px, 1fr)); */
+
+  /* minmax com minimo de 100px, ideal de 20%, no maximo 250px */
+  /* grid-template-columns: 100px repeat(2, minmax(100px, min(250px, 20%))); */
+
+  /* grid-template-columns: 1fr repeat(2, minmax(100px, min(250px, 20%))); */
+
+  /* Vendo outra possibilidade. Partir daqui. Assim quebra em telas pequenas */
+  /* grid-template-columns: 1fr repeat(2, minmax(150px, 20%)); */
+
+  /* grid-template-columns: 1fr repeat(2, minmax(auto, max(150px, 20%))); */
+}
+
+
+/*Responsividade - Liberar divs com texto*/
+/* @media (max-width: 40em){
+  .grid{
+    grid-template-columns: 1fr;
+  }
+} */
+
+/* auto fit e auto fill */
+.grid{
+  grid-template-columns: repeat(auto-fit, 200px);
+
+  /* Funciona, mas nao faz sentido */
+  /* grid-template-columns: repeat(auto-fit, 40%); */
+  /* grid-template-columns: repeat(2, 40%); */
+
+  /* Não funciona */
+  /* grid-template-columns: repeat(auto-fit, 1fr); */
+
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+
+  /*Assim nao faz diferenca*/
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+
+  /* Comentar o html e ficar so com duas divs e mostrar que o fill coloca conteudo fantasma*/
+  /*Geralmente a gente quer o auto fit*/
+}
+
+
+/*fit content - conheci hoje*/
+.grid{
+
+  grid-template-columns: 300px;
+  grid-template-columns: fit-content(300px);
+
+  grid-template-columns: 40%;
+  grid-template-columns: fit-content(40%);
+
+  /*comparar*/
+  grid-template-columns: repeat(2, 40%);
+  grid-template-columns: repeat(2, fit-content(40%));
+}

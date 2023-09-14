@@ -1,0 +1,163 @@
+/* base */
+body{
+  padding-block: 5vh;
+  
+  background-color: #e8f4ea;
+  opacity: 1;
+  background: linear-gradient(135deg, #009a1955 25%, transparent 25%) -40px 0/ 80px 80px, linear-gradient(225deg, #009a19 25%, transparent 25%) -40px 0/ 80px 80px, linear-gradient(315deg, #009a1955 25%, transparent 25%) 0px 0/ 80px 80px, linear-gradient(45deg, #009a19 25%, #e8f4ea 25%) 0px 0/ 80px 80px;
+}
+
+main{
+  border: 3px solid #009a19;
+}
+
+main div{
+  padding: 1.5em 1.5em;
+  
+  background-color: #009a19;
+
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #eeddee;
+}
+
+.grid{
+  display: grid;
+  
+
+  width: 50%;
+  margin-inline: auto;
+}
+
+.grid > div{
+  border: 1px solid #eeddee;
+}
+
+/* Comeca aqui */
+
+/* Reforcar hierarquia
+Elemento com grid / grid em si / celulas / elementos */
+
+
+/* Justify e align content - Precisa ter espaco */
+.grid{
+  width: 90%;
+  height: 2000px;
+  background-color: #eeddee;
+
+  justify-content: stretch;
+  justify-content: start;
+  justify-content: center;
+  justify-content: end;
+
+  justify-content: stretch;
+  grid-template-columns: repeat(3, 200px);
+  justify-content: start;
+  justify-content: center;
+  justify-content: end;
+  justify-content: space-between;
+  justify-content: space-around;
+  justify-content: space-evenly;
+
+  justify-content: stretch;
+  grid-template-columns: repeat(3, 1fr);
+  justify-content: start;
+  grid-template-columns: repeat(3, 200px);
+  justify-content: stretch;
+  grid-template-columns: repeat(3, 1fr);
+
+
+  align-content: start;
+  height: unset;
+  align-content: stretch;
+  align-content: start;
+  height: 2000px;
+  align-content: center;
+  align-content: end;
+  align-content: space-between;
+  align-content: space-around;
+  align-content: space-evenly;
+
+  grid-template-columns: repeat(3, 200px);
+  justify-content: center;
+  align-content: center;
+
+  justify-content: space-between;
+  align-content: space-between;
+
+  place-content: end;
+  place-content: start end;
+  place-content: center space-between;
+
+  justify-content: stretch;
+  align-content: stretch;
+  grid-template-columns: repeat(3, auto);
+}
+
+/* Justify e align items */
+/* Como o grid funciona */
+.grid > div:nth-child(1){
+  /* width: 50%; */
+  /* height: 50%; */
+  /* comentar isso depois de mostrar */
+}
+
+.grid{
+  justify-items: start;
+}
+
+.grid > :nth-child(1){
+  width: 100%;
+}
+
+.grid{
+  justify-items: center;
+  justify-items: end;
+
+  justify-items: stretch;
+  grid-template-columns: repeat(3, 200px);
+  justify-items: start;
+  justify-items: center;
+  justify-items: end;
+
+  /* Nao funciona */
+  justify-items: space-between;
+
+  justify-items: stretch;
+  grid-template-columns: repeat(3, auto);
+
+  /* ALIGN ITEMS */
+  align-items: start;
+}
+
+/* colocar um item com 100%, 80% e 800% de altura */
+.grid > :nth-child(1){
+  height: 100%;
+  height: 80%;
+  height: 800%;
+}
+
+.grid{
+  align-items: center;
+  align-items: end;
+
+  place-items: start;
+  place-items: center;
+  place-items: end;
+  place-items: start end;
+
+  place-items: stretch;
+}
+
+/* Self */
+.grid > div:nth-child(5){
+  justify-self: start;
+  justify-self: center;
+  justify-self: end;
+  justify-self: stretch;
+  align-self: start;
+  align-self: center;
+  align-self: end;
+  place-self: center;
+}
+
