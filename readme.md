@@ -94,7 +94,6 @@ https://cssgrid.io/
 Grid CheatSheet
 https://css-tricks.com/snippets/css/complete-guide-grid/
 
-
 KEVIN POWELL
 Get started with grid WITHOUT being overwhelmed
 https://www.youtube.com/watch?v=8QSqwbSztnA
@@ -105,11 +104,9 @@ https://www.youtube.com/watch?v=rg7Fvvl3taU
 Easier layouts with these 3 Grid tips
 https://www.youtube.com/watch?v=z2kuC7w9emE
 
+AutoFill e auto-fit
 Auto fill x auto fit
 https://css-tricks.com/auto-sizing-columns-css-grid-auto-fill-vs-auto-fit/
-
-Fit content
-https://developer.mozilla.org/en-US/docs/Web/CSS/fit-content_function
 
 KEVIN POWELL
 The magic of auto-fit and auto-fill (and the difference between them)
@@ -117,3 +114,11 @@ https://www.youtube.com/watch?v=qjJR3qYCd54
 
 LAYOUT LAND
 https://www.youtube.com/watch?v=tFKrK4eAiUQ
+
+minmax()
+https://ishadeed.com/article/css-grid-minmax/
+
+https://thecsspodcast.libsyn.com/011-grid
+
+Fit content
+https://developer.mozilla.org/en-US/docs/Web/CSS/fit-content_function
