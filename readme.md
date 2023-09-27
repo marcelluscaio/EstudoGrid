@@ -118,6 +118,7 @@ https://www.youtube.com/watch?v=tFKrK4eAiUQ
 minmax()
 https://ishadeed.com/article/css-grid-minmax/
 
+Podcast sobre grid
 https://thecsspodcast.libsyn.com/011-grid
 
 Fit content
